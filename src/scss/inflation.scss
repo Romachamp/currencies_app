@@ -1,0 +1,48 @@
+.inflation {
+  margin: 100px auto;
+  padding: 20px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.inflation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.response {
+  margin-top: 50px;
+}
+
+.inflation-card {
+  box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.inflation-title {
+  text-transform: uppercase;
+}
+
+.inflation-list {
+  margin-top: 30px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    h1 {
+      font-size: 25px;
+    }
+    h3 {
+      align-self: flex-end;
+      font-size: 25px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.biggest-inflation {
+  margin-top: 30px;
+}

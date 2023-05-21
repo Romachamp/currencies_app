@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 50px;
+}
+
+.error-status {
+  font-size: 60px;
+}
+
+.error-content {
+  margin-top: 10px;
+  p {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@import 'header';
+@import 'home';
+@import 'conversation';
+@import 'inflation';

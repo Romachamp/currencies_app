@@ -1,0 +1,171 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: white;
+    border: 0.3px solid rgba(70, 163, 88, 0.5);
+  }
+}
+
+.header-logo {
+  position: relative;
+  z-index: 6;
+}
+
+.header-container {
+  max-width: 82.5rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 6;
+
+  li {
+    margin-left: 1.875rem;
+  }
+}
+
+.header-link {
+  color: #3D3D3D;
+  position: relative;
+  transition: 0.3s;
+  &:hover {
+    color: #46A358;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    width: 0;
+    height: 0.188rem;
+    background: #46A358;
+    transition: 0.3s;
+  }
+  &.active {
+    font-family: "CeraBold";
+    color: black;
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.header-cart {
+  cursor: pointer;
+  position: relative;
+  z-index: 6;
+  svg {
+    transform: scale(1);
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.header-icon {
+  display: none;
+}
+
+
+@media (max-width: 650px) {
+  .header-icon {
+    display: block;
+    position: relative;
+    width: 1.875rem;
+    height: 1.875rem;
+    cursor: pointer;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 0.125rem;
+      background: #46A358;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.625rem;
+      width: 100%;
+      height: 0.125rem;
+      background: #46A358;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 1.25rem;
+      width: 100%;
+      height: 0.125rem;
+      background: #46A358;
+    }
+  }
+
+  .header-link {
+    font-size: 1.563rem;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: auto;
+    transition: 0.3s;
+
+    &.opened {
+      top: 0;
+    }
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.25rem;
+    padding-bottom: 1.25rem;
+
+    li {
+      margin-left: 0;
+      margin-top: 1.875rem;
+
+      &:nth-last-child(1) {
+        margin-bottom: 1.875rem;
+      }
+    }
+  }
+
+
+}

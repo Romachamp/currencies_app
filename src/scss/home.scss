@@ -1,0 +1,40 @@
+.home {
+  margin-top: 100px;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-img {
+  img {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
+.home-content {
+  margin-top: 50px;
+}
+
+.home-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 10px;
+  &::first-letter {
+    color: #46A358;
+    font-size: 50px;
+  }
+}
+
+.home-text {
+  margin: 30px auto;
+  max-width: 700px;
+  p {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
